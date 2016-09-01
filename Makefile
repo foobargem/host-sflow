@@ -48,8 +48,8 @@ rpm:
 	MYARCH=`uname -m`; \
 	MYVER=`./getVersion`; \
 	MYREL=`./getRelease`; \
-	MYTARBALL=$(PROG)-$$MYVER.tar.gz; \
-	git archive HEAD --prefix=$(PROG)-$$MYVER-$$MYREL/ | gzip >$$MYTARBALL; \
+	MYTARBALL=$(PROG)-$$MYVER-$$MYREL.tar.gz; \
+	git archive HEAD --prefix=$(PROG)-$$MYVER/ | gzip >$$MYTARBALL; \
 	mkdir -p $(MY_RPM_TOP)/BUILD; \
 	mkdir -p $(MY_RPM_TOP)/SRPMS; \
 	mkdir -p $(MY_RPM_TOP)/RPMS; \
